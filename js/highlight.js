@@ -2,6 +2,7 @@
 const galleryImage = document.getElementsByClassName("all");
 for (var i = 0; i < galleryImage.length; i++) {
   galleryImage[i].addEventListener("mouseover", shine);
+
   function shine() {
     this.style.transform = "translateY(5px)";
     this.style.transition = ".75s";
@@ -17,6 +18,7 @@ for (var i = 0; i < galleryImage.length; i++) {
   }
   // Mouseout event to return images to normal size and opacity
   galleryImage[i].addEventListener("mouseout", normal);
+
   function normal() {
     this.style.transform = "scale(1.0)";
     this.style.transition = ".75s";
