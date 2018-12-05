@@ -1,0 +1,4 @@
+11-15-2018: Anything you see on the index.html page at this point is 100% not representative. Still looking to find a good way to go about displaying your art layout wise.
+
+11/16/2018: Made a mockup website layout based on: (https://onlinemediamasters.com/wordpress-themes-for-artists/)-template_3:"PEAK". Still need dynamic functionality for
+vertical nav bar (probably need to change them to buttons and give them ids to mactch with img ids for sorting). Need Javascript animastions.

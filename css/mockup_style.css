@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    }
+
+header{
+  height: 3%;
+}
+body{
+  background-color: rgba(0,0,0,0);
+}
+.container{
+  width: 80%;
+  margin:auto;
+}
+.gallery{
+  float: left;
+  width: 85%;
+}
+#vert_nav{
+  width: 15%;
+  float: left;
+}
+#vert_nav ul{
+  list-style-type: none;
+}
+#vert_nav li{
+  margin: 8px 0 0;
+  font-weight: bold;
+  color: rgba(50,50,0,.7);
+}
+#info a{
+  float: right;
+}
+#site_links {
+list-style-type: none;
+margin:20 0 0px;
+padding:0;
+width:85%;
+float: right;
+}
+#site_links li{
+  display: inline;
+  margin: 0 2px 0 0;
+}
+#site_links input{
+  float: right;
+}
+.other_site a{
+  text-decoration: none;
+}
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    max-height: 80;
+}
+
+/* Organizing picturs in gallery (need to understand better)*/
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 17%;
+    padding: 0 8px;
+    margin: 20px 0 0;
+}
+
+.column img {
+  transition: .4s;
+    margin-top: 8px;
+    vertical-align: middle;
+}
+.column img:hover{
+  filter: grayscale(100%);
+  transform: scale(1.1);
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}

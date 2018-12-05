@@ -1,0 +1,62 @@
+body{
+font:20px/1.5 Arial, Helvetica, sans-serif;
+padding:0;
+margin: 0;
+background-color: rgba(10,10,11,.95);
+}
+.containter{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  border:1px solid white;
+  position: relative;
+}
+
+header{
+  margin: 0;
+  padding:0;
+}
+header h2{
+  color: rgba(10,10,20,.9);
+  font-style: oblique;
+  font-size: 50px;
+  margin: 0;
+}
+header p{
+margin: 0;
+padding: 0;
+
+}
+header a{
+text-decoration: none;
+text-transform: uppercase;
+font-size: 17px;
+font-weight: bolder;
+padding: 5px;
+float: right;
+color: red;
+}
+header a:link{
+background-color: purple;
+color: rgba(10,10,20,.9);
+
+}
+header a:visited{
+  color: rgba(10,10,20,.9);
+}
+header nav{
+  float: right;
+  position: absolute;
+  bottom:0;
+  right:0;
+}
+header li{
+float: left;
+display: inline;
+margin: 0 2px 0 0 ;
+}
+#intro{
+  min-height: 300px;
+  text-align: center;
+  background: url("../img/AZ_1.png") no-repeat  center;
+}
