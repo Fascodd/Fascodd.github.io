@@ -41,7 +41,6 @@ for (var i = 0; i < butn.length; i++) {
       });
       non_selected.forEach(function(image) {
         var image_style = image.style;
-
         image_style.opacity = "0";
         image_style.transition = "1.5s";
         image_style.display = "block";
