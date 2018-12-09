@@ -6,7 +6,7 @@ Object.values(galleryImage).forEach(function(image) {
   image.addEventListener("mouseover", shine);
   function shine() {
     // sets iimage text to name of file
-    let img_text_src = image.children[0].children[0].src;
+    let img_text_src = image.children[0].src;
     let img_text = img_text_src
       .split("")
       .reverse()
@@ -38,7 +38,6 @@ Object.values(galleryImage).forEach(function(image) {
   // Mouseout event to return images to normal size and opacity
   image.addEventListener("mouseout", normal);
   function normal() {
-    image.style.transform = "scale(1.0)";
     image.style.transition = ".75s";
     image.style.zIndex = "0";
     image.children[1].style.transition = ".75s";

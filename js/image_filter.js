@@ -5,11 +5,16 @@ const img_arr = document.getElementsByClassName("all");
 const gallery = document.getElementsByClassName("gallery")[0];
 const description = document.getElementsByClassName("description");
 var info_div = document.getElementsByClassName("info_div")[0];
-
-for (var i = 0; i < butn.length; i++) {
-  butn[i].addEventListener("click", filter);
+var first = [];
+Object.values(img_arr).forEach(function(a) {
+  first.push(a.getBoundingClientRect());
+});
+Object.values(butn).forEach(function(button) {
+  button.addEventListener("click", filter);
   //Function, filter(), for EventListener
   function filter() {
+    var last = [];
+    console.log(first);
     //Variables used in this filter
     var match_counter = 0;
     var non_selected = [];
@@ -22,6 +27,8 @@ for (var i = 0; i < butn.length; i++) {
     info_div.style.zIndex = "-5";
     //
     for (var j = 0; j < img_arr.length; j++) {
+      var this_now = img_arr[j].getBoundingClientRect();
+
       var current_img = img_arr[j];
       var bttn_nm = this.innerHTML.toLowerCase();
       // Filters for images that fit the tag name
@@ -36,16 +43,22 @@ for (var i = 0; i < butn.length; i++) {
       }
       selected.forEach(function(image) {
         var image_style = image.style;
+        image_style.transition = "0s";
         image_style.opacity = "1";
         image_style.width = "";
       });
       non_selected.forEach(function(image) {
         var image_style = image.style;
+        image_style.transition = "0s";
         image_style.opacity = "0";
-        image_style.transition = "1.5s";
-        image_style.display = "block";
         image_style.width = "0";
       });
     }
+    Object.values(img_arr).forEach(function(a) {
+      last.push(a.getBoundingClientRect());
+    });
+
+    console.log(last);
+    first = last;
   }
-}
+});

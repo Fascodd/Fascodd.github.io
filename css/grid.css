@@ -15,7 +15,13 @@
   height: 100vh;
   grid-gap: 10px;
 }
-
+.signature {
+}
+.signature {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 100%;
+}
 .header {
   grid-column: 2;
   grid-row: 1/2;
@@ -79,6 +85,7 @@
   opacity: 0;
   text-align: center;
   color: rgba(20, 20, 20, 0.9);
+  font-size: 0;
 }
 
 .flex_group_1 .flex_group_2 .flex_group_3 .flex_group_4 .flex_group_5 {
@@ -130,7 +137,8 @@
 
 .all {
   position: relative;
-  width: 250px;
+  width: 15%;
+  height: 1%;
 }
 
 .gallery-img {
@@ -199,9 +207,10 @@
 /* Add Animation */
 .showcase_img {
   width: 100%;
+  max-width: 75%;
   object-fit: contain;
   max-height: 80%;
-  margin: 5% 0 0 0;
+  margin: 5% 0 0 11.5%;
   -webkit-animation-name: zoom;
   animation-name: zoom;
   animation-duration: 0.6s;
