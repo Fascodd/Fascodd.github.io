@@ -16,11 +16,10 @@
   grid-gap: 10px;
 }
 .signature {
-}
-.signature {
   grid-column: 1/2;
   grid-row: 1/2;
-  width: 100%;
+  width: 60%;
+  margin: auto;
 }
 .header {
   grid-column: 2;
@@ -137,8 +136,7 @@
 
 .all {
   position: relative;
-  width: 15%;
-  height: 1%;
+  width: 175px;
 }
 
 .gallery-img {
