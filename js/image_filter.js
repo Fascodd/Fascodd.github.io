@@ -40,47 +40,48 @@ Object.values(butn).forEach(function(button) {
       } else {
         non_selected.push(current_img);
       }
-      selected.forEach(function(image_in) {
-        var image_style = image_in.style;
-        image_style.transition = "0s";
+      selected.forEach(function(image) {
+        var image_style = image.style;
+        image_style.transition = ".9s";
         image_style.opacity = "1";
         image_style.width = "";
         image_style.height = "";
       });
-      non_selected.forEach(function(image_out) {
-        var image_style = image_out.style;
-        image_style.transition = "0s";
+      non_selected.forEach(function(image) {
+        var image_style = image.style;
+        image_style.transition = ".8s";
         image_style.opacity = "0";
-        image_style.width = "1px";
-        image_style.height = "1px";
+        image_style.width = ".1px";
+        image_style.height = ".1px";
+        image_style.transform = "scale(0)";
       });
     }
-    Object.values(img_arr).forEach(function(image) {
-      final_pos.push(image.getBoundingClientRect());
+    Object.values(img_arr).forEach(function(a) {
+      final_pos.push(a.getBoundingClientRect());
     });
     for (var i = 0; i < final_pos.length; i++) {
       const deltaX = initial_pos[i].left - final_pos[i].left;
       const deltaY = initial_pos[i].top - final_pos[i].top;
       const deltaW = initial_pos[i].width / final_pos[i].width;
       const deltaH = initial_pos[i].height / final_pos[i].height;
-      console.log(deltaX);
+
       img_arr[i].animate(
         [
           {
             transformOrigin: "top left",
             transform: `
     translate(${deltaX}px, ${deltaY}px)
-    scale(${deltaW}, ${deltaH})
+
   `
           },
           {
-            transformOrigin: "top left ",
+            transformOrigin: "center",
             transform: "none"
           }
         ],
         {
-          duration: 500,
-          easing: "ease-out",
+          duration: 1200,
+          easing: "ease-in",
           fill: "both"
         }
       );
