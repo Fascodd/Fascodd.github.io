@@ -34,19 +34,31 @@ Object.values(butn).forEach(function(button) {
       } else {
         non_selected.push(current_img);
       }
+      let delta_time_selected = 100;
+      let delta_time_non_selected = 100;
       selected.forEach(function(image) {
         var image_style = image.style;
-        image_style.transition = "1.5s";
-        image_style.opacity = "1";
-        image_style.width = "";
-        image_style.height = "";
+        if (image_style.opacity == "1") {
+        } else {
+          setTimeout(function() {
+            image_style.transition = ".5s";
+            image_style.opacity = "1";
+            image_style.width = "";
+          }, delta_time_selected);
+          delta_time_selected += 100;
+        }
       });
       non_selected.forEach(function(image) {
         var image_style = image.style;
-        image_style.transition = "1.5s";
-        image_style.opacity = "0";
-        image_style.width = ".1px";
-        image_style.height = ".1px";
+        if (image.style.opacity == "0") {
+        } else {
+          setTimeout(function() {
+            image_style.transition = ".5s";
+            image_style.opacity = "0";
+            image_style.width = "0";
+          }, delta_time_non_selected);
+          delta_time_non_selected += 100;
+        }
       });
     }
   }
